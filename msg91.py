@@ -29,7 +29,6 @@ class Msg91(object):
                 'authkey': self.authkey,
             }
         )
-        import ipdb; ipdb.set_trace()
         return response.status_code, response.content
 
     def change_password(self, cur_password, new_password):
@@ -55,7 +54,7 @@ class Msg91(object):
 
         :return:
         """
-        url = 'http://control.msg91.com/api/'
+        url = 'http://control.msg91.com/api/balance.php'
         response = requests.get(
             url, params={
                 'type': 4,
